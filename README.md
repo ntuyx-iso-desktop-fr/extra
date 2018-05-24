@@ -1,4 +1,4 @@
-## Ports for constructing the community collection
+## Ports for constructing the cli-extra gui-extra collections
 
 Contributions are welcome. If you don't know what it all about, please take the time to read the documentation at
 http://www.nutyx.org/en/build-package.html
