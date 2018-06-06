@@ -1,9 +1,10 @@
+# Depends on: perl
+
 description="A small collection of programs that operate on patch files"
 url="http://cyberelk.net/tim/patchutils/"
 contributors="tnut"
 packager="greg<greg@nutyx.org>"
 
-# Depends on: perl
 run=(perl)
 
 name=patchutils
