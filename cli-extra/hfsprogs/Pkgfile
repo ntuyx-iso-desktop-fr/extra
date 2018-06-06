@@ -1,9 +1,10 @@
+# Depends on: libbsd openssl
+
 description="HFS/HFS+ user space utils"
 url="http://www.opensource.apple.com/"
 contributors="fanch"
 packager="greg<greg@nutyx.org>"
 
-# Depends on: libbsd openssl
 
 name=hfsprogs
 version=332.25
