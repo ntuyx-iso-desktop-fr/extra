@@ -5,16 +5,10 @@ url="http://sourceforge.net/projects/acpiclient"
 packager="greg<greg@nutyx.org>"
 contributors=""
 
-run=()
-
-
-
 name=acpiclient
 version=1.7
-release=1
 
-source=(http://downloads.sourceforge.net/acpiclient/acpi-$version.tar.gz
-)
+source=(http://downloads.sourceforge.net/acpiclient/acpi-$version.tar.gz)
 
 prepare() {
 echo "Fonction vide, normal..."
@@ -24,15 +18,12 @@ build() {
 cd acpi-$version
 ./configure --prefix=/usr
 make
-make DESTDIR=$PKG install
 }
 
 package() {
-echo "Fonction  vide, normal..." 
+make DESTDIR=$PKG install
 }
 
 uptodate() {
 echo "Fonction  vide, normal..." 
 }
-
-# Recette editee le 13/10/17 a 20:54:48
