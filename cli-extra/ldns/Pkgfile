@@ -1,9 +1,9 @@
+# Depends on: openssl ca-certificates libcap python swig doxygen 
+
 description="Fast DNS library with the goal to simplify DNS programming."
 url="http://www.nlnetlabs.nl"
 contributors="berlius"
 packager="greg<greg@nutyx.org>"
-
-# Depends on: openssl ca-certificates libcap python swig doxygen 
 
 name=ldns
 version=1.7.0
