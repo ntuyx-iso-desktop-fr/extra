@@ -1,9 +1,9 @@
+# Depends on: python2 libjpeg-turbo gpgme
+
 description="CenterIM is a powerful communication tool that can be used through SSH."
 url="http://www.centerim.org/"
 contributors="pierre"
 packager="greg<greg@nutyx.org>"
-
-# Depends on: python2 libjpeg-turbo gpgme
 
 name=centerim
 version=4.22.10
@@ -30,5 +30,4 @@ package() {
 
 	cd $name-$version
 	make DESTDIR=$PKG install
-  
 }
