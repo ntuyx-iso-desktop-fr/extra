@@ -11,7 +11,7 @@ name=midori
 version=0.5.11
 release=5
 
-source=(https://www.midori-browser.org/wp-content/uploads/2018/08/$name_$version_all_.tar.bz2)
+source=(https://www.midori-browser.org/wp-content/uploads/2018/08/${name}_${version}_all_.tar.bz2)
 
 prepare() {
   cd $name-$version
