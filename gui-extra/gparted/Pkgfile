@@ -1,0 +1,40 @@
+# Depends on: polkit gnome-doc-utils gtk2 parted gtkmm2 libsigc++ ntfs-3g lvm2 docbook-xsl
+
+description="Gparted is the Gnome Partition Editor, a Gtk 2 GUI that can create, reorganise or delete disk partitions."
+url="http://gparted.sourceforge.net/"
+packager="tnut <tnut@nutyx.org>"
+contributors="Pierre B, Tnut, Greg"
+
+name=gparted
+version=0.32.0
+
+run=(polkit)
+
+source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz)
+
+build() {
+
+cd $name-$version
+./configure --prefix=/usr    \
+            --disable-static \
+            --enable-libparted-dmraid \
+            --enable-xhost-root
+            
+make
+make DESTDIR=$PKG install
+
+# Install policy file
+  install -D -m0644 org.gnome.gparted.policy \
+        "${PKG}"/usr/share/polkit-1/actions/org.gnome.gparted.policy
+}
+
+doc() {
+
+cd $PKG
+bsdtar -cf \
+$PKGMK_PACKAGE_DIR/${name}.doc${PKGMK_BUILDVER}any.cards.tar \
+usr/share/gnome
+
+rm -r usr/share/gnome
+
+}
